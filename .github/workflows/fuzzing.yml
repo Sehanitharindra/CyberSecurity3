@@ -12,12 +12,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Build the Docker image
+      - name: Build the Docker image of projectX2
         run: |
           cd Week2/ProjectX2-main
           docker build . --file Dockerfile --tag projectx2
-      - name: Run Docker Container
+      - name: Run Docker Container projectX2
         run: docker run projectx2
+      - name: Build the Docker image of projectX2
+        run: |
+          cd Week2/bazel
+          docker build . --file Dockerfile --tag projectx2
+      - name: Run Docker Container projectX2
+        run: docker run projectx2
+
+
       # - name: fuzzing test  
       #   run: | 
       #     cd Week2/ProjectX2-main
