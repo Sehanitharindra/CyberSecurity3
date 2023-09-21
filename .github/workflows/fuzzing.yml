@@ -12,9 +12,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: fuzzing test  
-        run: | 
-          cd Week2/ProjectX2-main
+      - name: Build the Docker image
+        run: |
+          cd Week2/ProjectX2 
           docker build . --file Dockerfile --tag projectx2
-          docker run projectx2 
+      - name: Run Docker Container
+        run: docker run projectx2
+      # - name: fuzzing test  
+      #   run: | 
+      #     cd Week2/ProjectX2-main
+      #     docker build . --file Dockerfile --tag projectx2
+      #     docker run projectx2 
