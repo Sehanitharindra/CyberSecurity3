@@ -23,8 +23,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTestin
 
 #Provide your repository link below
 # RUN git clone <your_repository_link> 
-RUN git clone https://github.com/SoftwareHardwareSecurity-2023/software-and-hardware-security-submissions-Sehanitharindra.git
-# https://github.com/SoftwareHardwareSecurity-2023/software-and-hardware-security-submissions-Sehanitharindra.git
+RUN git clone https://github.com/Sehanitharindra/Sehani-Siriwardana.git
 
 WORKDIR /ProjectX/ProjectX2
 RUN ls -a
